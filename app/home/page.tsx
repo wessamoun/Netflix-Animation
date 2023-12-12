@@ -54,7 +54,7 @@ const Home = async () => {
         <div className="min-w-[1000px] absolute overflow-hidden h-screen w-full -z-40 ">
           <Image
             className="h-screen absolute -z-40   flex justify-center items-center"
-            src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/original${upComingMovies[Math.floor(Math.random() * (upComingMovies.length - 1))].backdrop_path}`}
             alt="image"
             width="5000"
             height="5000"
