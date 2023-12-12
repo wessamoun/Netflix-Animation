@@ -36,7 +36,7 @@ const Home = async () => {
   const upComingMovies = comingData.filter((movie: movie) =>
     movie.genre_ids.includes(16)
   );
-  const movie =
+  let movie =
     upComingMovies[Math.floor(Math.random() * (upComingMovies.length - 1))];
   const trendingMovies = trendingData.filter((movie: movie) =>
     movie.genre_ids.includes(16)
