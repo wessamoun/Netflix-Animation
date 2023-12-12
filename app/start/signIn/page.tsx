@@ -23,7 +23,7 @@ const SignIn = () => {
         theme: "dark",
       });
     } else {
-      console.log(userR);
+      
     }
   };
 

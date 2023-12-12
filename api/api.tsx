@@ -2,7 +2,7 @@ import { movie } from "@/types/types";
 
 async function movies() {
   const res = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&include_adult=false&primary_release_year=2023&with_genres=16&}`
+    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&include_adult=false&primary_release_year=2023&with_genres=16&}` ,{cache: "no-cache"}
   );
   const movies = await res.json();
   return movies;
