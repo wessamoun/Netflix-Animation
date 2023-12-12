@@ -12,7 +12,7 @@ export async function upComing() {
   let moviesArray: movie[] = [];
   for (let i = 1; i < 50; i++) {
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&page=${i}&`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&page=${i}&`,{cache: "no-cache"}
     );
     const movies = await res.json();
     for (let j = 0; j < movies.results.length; j++) {
