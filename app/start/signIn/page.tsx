@@ -10,8 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
 import type { RootState } from "@/redux/store";
 import { FcGoogle } from "react-icons/fc";
+import { useRouter } from "next/navigation";
 
 const SignIn = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const userR = useSelector((state: RootState) => state.user.user);
@@ -23,7 +26,7 @@ const SignIn = () => {
         theme: "dark",
       });
     } else {
-      
+      router.push("/home");
     }
   };
 

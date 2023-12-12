@@ -36,8 +36,10 @@ const Home = async () => {
   const upComingMovies = comingData.filter((movie: movie) =>
     movie.genre_ids.includes(16)
   );
+
   let movie =
     upComingMovies[Math.floor(Math.random() * (upComingMovies.length - 1))];
+
   const trendingMovies = trendingData.filter((movie: movie) =>
     movie.genre_ids.includes(16)
   );
@@ -47,6 +49,7 @@ const Home = async () => {
   const top_ratedMovies = top_ratedData.filter((movie: movie) =>
     movie.genre_ids.includes(16)
   );
+
   return (
     <div>
       <div className={`h-screen relative overflow-hidden`}>

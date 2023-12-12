@@ -22,3 +22,8 @@ export interface genres {
   id: number;
   name: string;
 }
+export interface genresData {
+  genres: genres[]
+}
+
+

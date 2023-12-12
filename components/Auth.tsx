@@ -19,6 +19,8 @@ const Auth: React.FC<AuthProps> = ({ children }) => {
       if (user) {
         dispatch(setUser(user.uid));
         router.push("/home");
+        console.log("twice");
+        
       } else {
         dispatch(setUser(null));
         router.push("/start");
